@@ -45,6 +45,8 @@ namespace ExceptionHandling
                 {
                     Console.WriteLine($"There is problem with string " +
                         $"formatting: { ex.Message.Substring(0, 20) } ");
+
+                    throw new ApplicationException("Something went wrong", ex);
                 }
                 catch (ArgumentNullException)
                 {
